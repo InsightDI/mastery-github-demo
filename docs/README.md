@@ -20,7 +20,7 @@ This repository contains three GitHub Workflow files:
 
 * [Terraform Apply](/.github/workflows/tf-apply.yaml) - Triggered by a Push into the `master` branch.
 
-*[Docker Build and Push to Git Packages](/.github/workflows/docker.yaml) - Triggered by a Pull Request or Push into the `master` branch.
+* [Docker Build and Push to Git Packages](/.github/workflows/docker.yaml) - Triggered by a Pull Request or Push into the `master` branch.
 
 
 ## Terraform Plan
