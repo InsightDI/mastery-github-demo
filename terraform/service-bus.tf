@@ -27,3 +27,9 @@ resource "azurerm_servicebus_queue_authorization_rule" "demo" {
   send   = true
   manage = true
 }
+
+resource "azurerm_key_vault_secret" "demo_sbus_connection_string" {
+  name         = "demo-sbus-connection-string"
+  value        = azurerm_servicebus_queue_authorization_rule.demo.primary_connection_string
+  key_vault_id = azurerm_key_vault.demo.id
+}
