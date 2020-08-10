@@ -36,9 +36,9 @@ module "function_app_listener" {
   function_app_name                 = "${var.environment}-${var.app_name}-Event-Hub-Listener"
 
   appsettings = {
-    "AzureWebJobsStorage": "@Microsoft.KeyVault(VaultName=${azurerm_key_vault.demo.name};SecretName=${azurerm_key_vault_secret.demo_storage_account_access_key.name};SecretVersion=${azurerm_key_vault_secret.demo_storage_account_access_key.version})",
-    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
-    "devmasterysbusns_SERVICEBUS": "Endpoint=sb://dev-mastery-sbus-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=FtvYPwFpzHrzPEbjCxjkO0qfPgl+vcFmMiGrsGWKZmY="
+    "AzureWebJobsStorage" : "@Microsoft.KeyVault(VaultName=${azurerm_key_vault.demo.name};SecretName=${azurerm_key_vault_secret.demo_storage_account_access_key.name};SecretVersion=${azurerm_key_vault_secret.demo_storage_account_access_key.version})",
+    "FUNCTIONS_WORKER_RUNTIME" : "dotnet",
+    "devmasterysbusns_SERVICEBUS" : "Endpoint=sb://dev-mastery-sbus-ns.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=FtvYPwFpzHrzPEbjCxjkO0qfPgl+vcFmMiGrsGWKZmY="
     # "devmasterysbusns_SERVICEBUS": "@Microsoft.KeyVault(VaultName=${azurerm_key_vault.demo.name};SecretName=${azurerm_key_vault_secret.demo_sbus_connection_string.name};SecretVersion=${azurerm_key_vault_secret.demo_sbus_connection_string.version})"
   }
 }
