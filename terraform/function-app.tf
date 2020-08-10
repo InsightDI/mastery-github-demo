@@ -23,7 +23,7 @@ resource "azurerm_storage_container" "demo" {
 
 resource "azurerm_key_vault_secret" "demo_storage_account_access_key" {
   name         = "demo-storage-account-access-key"
-  value        = azurerm_storage_account.primary_access_key
+  value        = azurerm_storage_account.demo.primary_access_key
   key_vault_id = azurerm_key_vault.demo.id
 }
 
