@@ -21,7 +21,7 @@ resource "azurerm_key_vault" "demo" {
 
   access_policy {
     tenant_id = var.tenant_id
-    object_id = var.client_id
+    object_id = var.sp_id
 
     key_permissions = [
       "create",
@@ -31,6 +31,7 @@ resource "azurerm_key_vault" "demo" {
     secret_permissions = [
       "set",
       "get",
+      "list",
       "delete",
     ]
   }

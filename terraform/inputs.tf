@@ -10,10 +10,16 @@ variable "subscription_id" {
   default     = "acd2e298-d61f-4ed2-8b28-dc2f60d9f382"
 }
 
-variable "client_id" {
+variable "sp_id" {
   type        = string
   description = "The service principal ObjectId used to deploy the Terraform configuration"
-  default     = "e9933c22-daee-4e6e-b396-e89eb2feed93"
+  default     = "3ec218f8-8411-4851-be17-82979fdc94eb"
+}
+
+variable "client_id" {
+  type        = string
+  description = "The app client ID used to deploy the Terraform configuration"
+  default     = "02b6c340-bab3-472a-bb22-8d7241444b80"
 }
 
 variable "client_secret" {
