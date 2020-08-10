@@ -20,9 +20,3 @@ provider "azurerm" {
 provider "random" {
   version = "2.3.0"
 }
-
-provider "azuredevops" {
-  version               = ">= 0.0.1"
-  org_service_url       = "https://kroger-rd.visualstudio.com"
-  personal_access_token = var.devops_pat
-}
