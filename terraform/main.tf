@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "demo" {
 #   location            = azurerm_resource_group.demo.location
 #   sku                 = "Premium"
 #   admin_enabled       = true
-# }
+# } 
 
 resource "azurerm_key_vault" "demo" {
   name                = "mastery-demo-grizzle"
