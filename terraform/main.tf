@@ -4,7 +4,7 @@ resource "azurerm_resource_group" "demo" {
 }
 
 resource "azurerm_key_vault" "demo" {
-  name                   = "mastery-demo-grizzle"
+  name                = "mastery-demo-grizzle"
   location            = azurerm_resource_group.demo.location
   resource_group_name = azurerm_resource_group.demo.name
   tenant_id           = var.tenant_id
