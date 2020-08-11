@@ -19,8 +19,6 @@ resource "azurerm_storage_container" "demo" {
   container_access_type = "private"
 }
 
-# primary_access_key
-
 resource "azurerm_key_vault_secret" "demo_storage_account_access_key" {
   name         = "demo-storage-account-access-key"
   value        = azurerm_storage_account.demo.primary_access_key
