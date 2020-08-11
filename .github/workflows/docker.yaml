@@ -18,7 +18,7 @@ jobs:
       run: |
         VERSION=$(date +%s)
         REPO_NAME="${{ github.repository }}"
-        LOWERCASE_REPO_NAME=${LOWERCASE_REPO_NAME,,}
+        LOWERCASE_REPO_NAME=${REPO_NAME,,}
         docker build ./services/sbus-queue-reader/ --file ./services/sbus-queue-reader/Dockerfile --tag docker.pkg.github.com/${LOWERCASE_REPO_NAME}/sbus-reader:${VERSION}
         docker login docker.pkg.github.com --username ${{ github.repository_owner }} --password ${{ secrets.GITHUB_TOKEN }}
         docker push docker.pkg.github.com/${LOWERCASE_REPO_NAME}/sbus-reader:${VERSION}
