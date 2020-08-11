@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image and push to GitHub Packages
       run: |
         VERSION=$(date +%s)
-        LOWERCASE_REPO_NAME=tr '[A-Z]' '[a-z]' < ${ github.repository }
+        LOWERCASE_REPO_NAME=tr '[A-Z]' '[a-z]' < ${{ github.repository }}
         y="THIS IS a TeSt"
         echo "${y,,}"
         docker build ./services/sbus-queue-reader/ --file ./services/sbus-queue-reader/Dockerfile --tag docker.pkg.github.com/{ LOWERCASE_REPO_NAME }/sbus-reader:${ VERSION }
