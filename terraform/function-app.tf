@@ -36,6 +36,6 @@ module "function_app_listener" {
   appsettings = {
     "AzureWebJobsStorage" : "@Microsoft.KeyVault(VaultName=${azurerm_key_vault.demo.name};SecretName=${azurerm_key_vault_secret.demo_storage_account_access_key.name};SecretVersion=${azurerm_key_vault_secret.demo_storage_account_access_key.version})",
     "FUNCTIONS_WORKER_RUNTIME" : "dotnet",
-    "devmasterysbusns_SERVICEBUS": "@Microsoft.KeyVault(VaultName=${azurerm_key_vault.demo.name};SecretName=${azurerm_key_vault_secret.demo_sbus_connection_string.name};SecretVersion=${azurerm_key_vault_secret.demo_sbus_connection_string.version})"
+    "devmasterysbusns_SERVICEBUS" : "@Microsoft.KeyVault(VaultName=${azurerm_key_vault.demo.name};SecretName=${azurerm_key_vault_secret.demo_sbus_connection_string.name};SecretVersion=${azurerm_key_vault_secret.demo_sbus_connection_string.version})"
   }
 }
